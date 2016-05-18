@@ -8,11 +8,13 @@ import javax.ws.rs.core.MediaType;
 @Path("/status")
 public class V1Status {
 	
+	private static int counter=1000;
+
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public String returnTitle()
 	{
-		return "<p>Java Web Service</p>";
+		return "<p>Java Web Service</p>" + counter++;
 	}
 
 }
